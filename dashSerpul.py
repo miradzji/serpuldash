@@ -45,13 +45,13 @@ last_day = sample_date + relativedelta(day=31)
 active_day = sample_date + relativedelta(day=90)
 
 ## DATA AKSES ##
-dfTransaksiSuksesPra = spark.read.csv("Transaksi_Serpul/gabungan/tbl_transaksi_pra_sukses.csv", header=True)
-dfTransaksiSuksesPasca = spark.read.csv("Transaksi_Serpul/gabungan/tbl_transaksi_pasca_sukses.csv", header=True)
-dfTransaksiSuksesLainnya = spark.read.csv("Transaksi_Serpul/gabungan/tbl_transaksi_lainnya_sukses.csv", header=True)
-dfTransaksiRefundPra = spark.read.csv("Transaksi_Serpul/gabungan/tbl_transaksi_pra_refund.csv", header=True)
-#dfTransaksiRefundPasca = spark.read.csv("Transaksi_Serpul/gabungan/tbl_transaksi_pasca_refund.csv", header=True)
-dfLBCustomer = spark.read.csv("Last_Balance_Customer_Serpul/gabungan/tbl_lb_customer.csv", header=True)
-dfTransaksiRefundLainnya = spark.read.csv("Transaksi_Serpul/gabungan/tbl_transaksi_lainnya_refund.csv", header=True)
+dfTransaksiSuksesPra = spark.read.csv("tbl_transaksi_pra_sukses.csv", header=True)
+dfTransaksiSuksesPasca = spark.read.csv("tbl_transaksi_pasca_sukses.csv", header=True)
+dfTransaksiSuksesLainnya = spark.read.csv("tbl_transaksi_lainnya_sukses.csv", header=True)
+dfTransaksiRefundPra = spark.read.csv("tbl_transaksi_pra_refund.csv", header=True)
+#dfTransaksiRefundPasca = spark.read.csv("tbl_transaksi_pasca_refund.csv", header=True)
+dfLBCustomer = spark.read.csv("tbl_lb_customer.csv", header=True)
+dfTransaksiRefundLainnya = spark.read.csv("tbl_transaksi_lainnya_refund.csv", header=True)
 
 # mongo_ip = "mongodb://192.168.1.125:27017/"
 # dfTransaksiSuksesPra = spark.read.format("mongo").option("uri",mongo_ip).option("database","serpul_db").option("collection","tbl_transaksi_pra_sukses").load().drop('_id')
